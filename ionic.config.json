@@ -1,0 +1,9 @@
+{
+  "name": "flag-football",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "yarn": true
+}

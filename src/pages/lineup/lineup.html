@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lineup</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="toggleEdit()">
+        {{editButtonText}}
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list [reorder]="editing" (ionItemReorder)="reorderData($event)">
+    <ion-item-sliding *ngFor="let player of players">
+      <ion-item>
+        {{player | playerName}}
+      </ion-item>
+
+      <ion-item-options>
+        <button ion-button icon-only (click)="navPlayerStats(player)" light>
+          <ion-icon name="stats"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
